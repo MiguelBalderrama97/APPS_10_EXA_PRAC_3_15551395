@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String text;
 
-    private final String BAD_WORD = "cion";
+//    private final String BAD_WORD = "cion";
 
     private Handler handlerWords = new Handler();
     private Runnable runnableWords = new Runnable() {
@@ -86,11 +87,21 @@ public class MainActivity extends AppCompatActivity {
 
                     int errors = 0;
                     for(int i = 0; i < text.length(); i++){
-                        if(text.indexOf(BAD_WORD) == i){
-                            errors++;
+                        if(text.charAt(i)== 'c'){
+                            if((i+3) < text.length()){
+                                if(text.charAt(i+1)=='i'&&text.charAt(i+2)=='o' && text.charAt(i+3)=='n'){
+                                    errors++;
+                                }
+                            }
                         }
+//                        if(text.indexOf(BAD_WORD) == i){
+//                            errors++;
+//                        }
                         txtErrors.setText("Errores: " + errors);
                     }
+
+//                    Log.wtf("ORALE",text.indexOf(BAD_WORD)+"");
+
                 }
 
                 @Override

@@ -13,25 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Hello World!"
         android:inputType="textMultiLine"/>
-
-    <Button
-        android:id="@+id/btnComprobar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Comprobar"/>
 
     <TextView
         android:id="@+id/txtWords"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Palabras:"/>
+        android:text="Palabras: 0"/>
 
     <TextView
         android:id="@+id/txtErrors"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Errores:"/>
+        android:text="Errores: 0"/>
 
 </LinearLayout>

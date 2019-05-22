@@ -8,7 +8,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    
+
     private TextView txtName;
     private ImageButton btnPrev, btnNext, btnPlay, btnPause;
     private Switch swRandom;
